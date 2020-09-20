@@ -60,7 +60,13 @@ namespace Interception.Core.Interceptors
                 var returnType = invocation.Method.ReturnType;
                 if (returnType == typeof(void))
                 {
-                    this.Log(methodName, className, returnType);
+                    this.logger.Log(
+                        this.loggingSettings.LogLevel,
+                        $"Executed '{{targetMethod}}' ({{targetClass}}). Return type: '{{returnType}}'.",
+                        methodName,
+                        className,
+                        returnType);
+                    return;
                 }
 
                 if (returnType == typeof(Task) || (returnType.IsGenericType && returnType.GetGenericTypeDefinition() == typeof(Task<>)))

@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+
+    "Interceptor__Logging__CanTrackArguments": "true",
+    "Interceptor__Logging__IsEnabled": "true",
+    "Interceptor__Logging__LogLevel": "Debug"
+  }
+}

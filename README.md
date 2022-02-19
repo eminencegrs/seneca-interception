@@ -1,2 +1,2 @@
 # Seneca.Interception
-[![.NET](https://github.com/eminencegrs/seneca-interception/actions/workflows/dotnet-core.yml/badge.svg?branch=master)](https://github.com/eminencegrs/seneca-interception/actions/workflows/dotnet-core.yml)
+[![.NET](https://github.com/eminencegrs/seneca-interception/actions/workflows/dotnet-core.yml/badge.svg)](https://github.com/eminencegrs/seneca-interception/actions/workflows/dotnet-core.yml)

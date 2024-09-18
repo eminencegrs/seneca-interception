@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Castle.DynamicProxy;
-using Newtonsoft.Json;
 using Seneca.Interception.Core.Settings;
 
 namespace Seneca.Interception.Core.Interceptors;
@@ -132,7 +132,7 @@ public class LoggingWithParametersInterceptor : LoggingInterceptorBase
         {
             this.logger.LogTrace($"Serializing parameters...");
 
-            var serialized = JsonConvert.SerializeObject(parameters);
+            var serialized = JsonSerializer.Serialize(parameters);
 
             this.logger.LogTrace($"Parameters have been successfully serialized.");
 
@@ -152,7 +152,7 @@ public class LoggingWithParametersInterceptor : LoggingInterceptorBase
         {
             this.logger.LogTrace($"Serializing a return value...");
 
-            var returnValue = JsonConvert.SerializeObject(result);
+            var returnValue = JsonSerializer.Serialize(result);
 
             this.logger.LogTrace($"Return value has been successfully serialized.");
 
